@@ -6,7 +6,17 @@ Run dockerovs.sh
 # 2. SETUP BRIDGE CONNECTIONS & CONFIGURE CONTAINERS FOR NDN AND IP TRAFFIC
 Run dockerbridge.sh
 
-# 3. TEST BRIDGE SETUP BETWEEN CONTAINERS
+# 3. BUILD NDN & IP DOCKER CONTAINERS
+Run ndndocker.sh 
+Run ipdocker.sh 
+
+# 4. TEST INDIVIDUAL CONNECTIVITY
+## At NDN container 
+ping ndn container
+## At IP container 
+ping ip container
+
+# 5. TEST BRIDGE SETUP BETWEEN CONTAINERS
 ## At each container
 apt-get update; 
 apt-get install iputils-ping
