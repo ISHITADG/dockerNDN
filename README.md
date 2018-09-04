@@ -12,7 +12,7 @@ apt-get update;
 apt-get install iputils-ping
 
 ## at NDN Container 
-ping "<IP of IP Container>"
+ping "IP of IP Container"
   
 ## at IP Container 
-ping "<IP of NDN Container>"
+ping "IP of NDN Container"
