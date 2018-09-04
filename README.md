@@ -6,7 +6,7 @@ Run dockerovs.sh
 # 2. SETUP BRIDGE CONNECTIONS & CONFIGURE CONTAINERS FOR NDN AND IP TRAFFIC
 Run dockerbridge.sh
 
-# 3. BUILD THE DOCKER CONTAINERS
+# 3. BUILD & RUN THE DOCKER CONTAINERS
 ## NDN Container
 Run ndndocker.sh
 ## IP Container 
