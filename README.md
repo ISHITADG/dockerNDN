@@ -17,6 +17,10 @@ sudo docker ps
 ## To stop a container
 sudo docker stop "docker-name" <br />
 For ex:- sudo docker stop ndn1
+## Detach & leave it running
+Ctrl+P Ctrl+Q
+## Rejoin
+docker attach "container name"
 
 # 3. SETUP BRIDGE CONNECTIONS & CONFIGURE CONTAINERS FOR NDN AND IP TRAFFIC
 ## Connect the containers to OVS bridge
