@@ -26,7 +26,7 @@ Run dockerbridge.sh
 ## At NDN container
 apt-get update; <br />
 apt-get install iputils-ping <br />
-apt-get install net-tools
+apt-get install net-tools <br />
 apt-get install iproute2
 
 ## At NDN container 
