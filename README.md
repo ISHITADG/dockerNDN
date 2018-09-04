@@ -58,12 +58,12 @@ At client:   <br />
 # 6. TEST IP FILE TRANSFER
 At server: <br />
 >sudo apt-get install apache2 <br /> 
->cp ~/100KB.txt /var/www/html/
->sudo chown -R $USER:$USER /var/www/
->sudo chmod -R 755 /var/www
->cd /etc/apache2/sites-available/
->sudo vim 000-default.conf
->sudo a2ensite 000-default.conf
->sudo service apache2 restart
-At client:
->wget http://172.18.0.1/1KB.txt
+>cp ~/100KB.txt /var/www/html/  <br />
+>sudo chown -R $USER:$USER /var/www/  <br />
+>sudo chmod -R 755 /var/www  <br />
+>cd /etc/apache2/sites-available/  <br />
+>sudo vim 000-default.conf  <br />
+>sudo a2ensite 000-default.conf  <br />
+>sudo service apache2 restart  <br />
+At client:  <br />
+>wget http://172.18.0.1/1KB.txt 
