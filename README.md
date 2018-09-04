@@ -10,7 +10,9 @@ Run dockerbridge.sh
 ## NDN Container
 Run ndndocker.sh <br />
 docker ps <br />
-docker exec -it "ndn-container-id" bash
+docker exec -it "ndn-container-id" bash <br />
+check nfd-status inside the container 
+>nfd-status 
 
 ## IP Container 
 Run ipdocker.sh 
