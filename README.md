@@ -3,39 +3,35 @@ DockerNDN: Run and compare NDN setup with other exisiting traffic on host using 
 # 1. SETUP DOCKER AND OVS/OPENVSWITCH 
 Run dockerovs.sh
 
-# 2. SETUP BRIDGE CONNECTIONS & CONFIGURE CONTAINERS FOR NDN AND IP TRAFFIC
-Run dockerbridge.sh
-
-# 3. BUILD & RUN THE DOCKER CONTAINERS
+# 2. BUILD & RUN THE DOCKER CONTAINERS
 ## NDN Container
 Run ndndocker.sh <br />
 docker ps <br />
 docker exec -it "ndn-container-id" bash <br />
 check nfd-status inside the container 
 >nfd-status 
-
 ## IP Container 
 Run ipdocker.sh 
-
 ## Test running containers
 sudo docker ps
 ## To stop a container
 sudo docker stop "docker-name" <br />
 For ex:- sudo docker stop ndn1
 
-# 4. TEST INDIVIDUAL CONNECTIVITY
-## At NDN container 
-ping ndn container
-## At IP container 
-ping ip container
+# 3. SETUP BRIDGE CONNECTIONS & CONFIGURE CONTAINERS FOR NDN AND IP TRAFFIC
+## Connect the containers to OVS bridge
+Run dockerbridge.sh
 
-# 5. TEST BRIDGE SETUP BETWEEN CONTAINERS
+# 4. TEST INDIVIDUAL CONNECTIVITY
 ## At each container
 apt-get update; <br />
-apt-get install iputils-ping
+apt-get install iputils-ping <br />
+apt-get install net-tools
+## At NDN container 
+ping "IP of IP container as defined in dockerbridge"
+## At IP container 
+ping "IP of NDN container as defined in dockerbridge"
 
-## at NDN Container 
-ping "IP of IP Container"
-  
-## at IP Container 
-ping "IP of NDN Container"
+# 5. TEST NDNPING & NDN-FILE TRANSFER
+
+# 6. TEST IP FILE TRANSFER
