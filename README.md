@@ -6,9 +6,16 @@ Run dockerovs.sh
 # 2. SETUP BRIDGE CONNECTIONS & CONFIGURE CONTAINERS FOR NDN AND IP TRAFFIC
 Run dockerbridge.sh
 
-# 3. BUILD NDN & IP DOCKER CONTAINERS
-Run ndndocker.sh 
+# 3. BUILD THE DOCKER CONTAINERS
+## NDN Container
+Run ndndocker.sh
+## IP Container 
 Run ipdocker.sh 
+## Test running containers
+sudo docker ps
+## To stop a container
+sudo docker stop <docker-name>
+For ex:- sudo docker stop ndn1
 
 # 4. TEST INDIVIDUAL CONNECTIVITY
 ## At NDN container 
