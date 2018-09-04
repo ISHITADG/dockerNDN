@@ -23,10 +23,12 @@ For ex:- sudo docker stop ndn1
 Run dockerbridge.sh
 
 # 4. TEST INDIVIDUAL CONNECTIVITY
-## At each container
+## At NDN container
 apt-get update; <br />
 apt-get install iputils-ping <br />
 apt-get install net-tools
+apt-get install iproute2
+
 ## At NDN container 
 ping "IP of IP container as defined in dockerbridge"
 ## At IP container 
