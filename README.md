@@ -8,9 +8,9 @@ Run dockerbridge.sh
 
 # 3. BUILD & RUN THE DOCKER CONTAINERS
 ## NDN Container
-Run ndndocker.sh
->docker ps
->docker exec -it "ndn-container-id" bash
+Run ndndocker.sh <br />
+docker ps <br />
+docker exec -it "ndn-container-id" bash
 
 ## IP Container 
 Run ipdocker.sh 
@@ -18,7 +18,7 @@ Run ipdocker.sh
 ## Test running containers
 sudo docker ps
 ## To stop a container
-sudo docker stop <docker-name>
+sudo docker stop "docker-name" <br />
 For ex:- sudo docker stop ndn1
 
 # 4. TEST INDIVIDUAL CONNECTIVITY
@@ -29,7 +29,7 @@ ping ip container
 
 # 5. TEST BRIDGE SETUP BETWEEN CONTAINERS
 ## At each container
-apt-get update; 
+apt-get update; <br />
 apt-get install iputils-ping
 
 ## at NDN Container 
