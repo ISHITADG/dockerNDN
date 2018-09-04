@@ -9,8 +9,12 @@ Run dockerbridge.sh
 # 3. BUILD & RUN THE DOCKER CONTAINERS
 ## NDN Container
 Run ndndocker.sh
+docker ps
+docker exec -it <ndn-container-id> bash
+
 ## IP Container 
 Run ipdocker.sh 
+
 ## Test running containers
 sudo docker ps
 ## To stop a container
